@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Professional Contact Form</title>
+  <link rel="stylesheet" href="style.css">
+ <script src="script.js"></script>
+</head>
+<body>
+
+  <div class="form-wrapper">
+    <form id="proForm" novalidate>
+      <h2>Get in Touch</h2>
+      <p class="subtitle">We’d love to hear from you</p>
+
+      <div class="field">
+        <input type="text" id="name" required />
+        <label>Full Name</label>
+        <small class="error"></small>
+      </div>
+
+      <div class="field">
+        <input type="email" id="email" required />
+        <label>Email Address</label>
+        <small class="error"></small>
+      </div>
+
+      <div class="field password-field">
+        <input type="password" id="password" required />
+        <label>Password</label>
+        <span id="togglePassword">👁</span>
+        <small class="error"></small>
+      </div>
+
+      <div class="field">
+        <textarea id="message" maxlength="200" required></textarea>
+        <label>Your Message</label>
+        <div class="counter"><span id="count">0</span>/200</div>
+        <small class="error"></small>
+      </div>
+
+      <button type="submit">
+        <span class="btn-text">Submit</span>
+        <span class="loader"></span>
+      </button>
+
+      <p id="status"></p>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

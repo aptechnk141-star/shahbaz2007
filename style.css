@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1d2671, #c33764);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-wrapper {
+  width: 100%;
+  max-width: 420px;
+  padding: 25px;
+}
+
+form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+h2 {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.field {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 14px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+label {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  padding: 0 5px;
+  color: #888;
+  pointer-events: none;
+  transition: 0.3s;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label,
+textarea:focus + label,
+textarea:not(:placeholder-shown) + label {
+  top: -6px;
+  font-size: 12px;
+  color: #1d2671;
+}
+
+.password-field span {
+  position: absolute;
+  right: 10px;
+  top: 14px;
+  cursor: pointer;
+}
+
+.counter {
+  text-align: right;
+  font-size: 12px;
+  color: #666;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: #1d2671;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  position: relative;
+}
+
+button.loading .btn-text {
+  visibility: hidden;
+}
+
+button.loading .loader {
+  display: block;
+}
+
+.loader {
+  display: none;
+  width: 20px;
+  height: 20px;
+  border: 3px solid #fff;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+#status {
+  margin-top: 15px;
+  text-align: center;
+  font-weight: bold;
+}
+
+@media (max-width: 480px) {
+  form {
+    padding: 20px;
+  }
+}
